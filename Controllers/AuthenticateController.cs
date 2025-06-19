@@ -55,12 +55,21 @@ namespace ExpenceManagment_AuthenticationSerivices.Controllers
         [HttpPost]
         public async Task<ActionResult<Users>> CreateUser([FromBody] Users user)
         {
-            user.CreatedAt = DateTime.Now;
 
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            else
+            {
+                user.CreatedAt = DateTime.Now;
 
-            return CreatedAtAction(nameof(GetUserById), new { id = user.UserID }, user);
+                _context.Users.Add(user);
+                await _context.SaveChangesAsync();
+
+                return CreatedAtAction(nameof(GetUserById), new { id = user.UserID }, user);
+            }
+               
         }
 
         [HttpPut("{id}")]
