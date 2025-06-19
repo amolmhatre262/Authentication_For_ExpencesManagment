@@ -1,6 +1,7 @@
 ﻿using ExpenceManagment_AuthenticationSerivices.Data;
 using ExpenceManagment_AuthenticationSerivices.Data.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,18 +19,19 @@ namespace ExpenceManagment_AuthenticationSerivices.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] LoginDto login)
+        public async Task<IActionResult> Login(LoginDto request)
         {
             var user = await _context.Users
-                .FirstOrDefaultAsync(u => u.UserName == login.UserName && u.PasswordHash == login.PasswordHash);
+                .FirstOrDefaultAsync(u => u.UserName == request.UserName && u.PasswordHash == request.PasswordHash);
 
             if (user == null)
             {
-                return Unauthorized("Invalid username or password.");
+                return Unauthorized("Invalid email or password.");
             }
 
             return Ok(new { message = "Login successful", user.UserID, user.UserName });
         }
+
 
 
         [HttpGet]
