@@ -12,10 +12,13 @@ namespace ExpenceManagment_AuthenticationSerivices.Controllers
     public class AuthenticateController : ControllerBase
     {
         private readonly ApplicationDBContext _context;
+        private readonly ILogger<AuthenticateController> _logger; // Fix for CS0246: Correct type name
 
-        public AuthenticateController(ApplicationDBContext context)
+        // Fix for CS8618: Ensure all non-nullable fields are initialized in the constructor
+        public AuthenticateController(ApplicationDBContext context, ILogger<AuthenticateController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         [HttpPost("login")]
@@ -32,13 +35,40 @@ namespace ExpenceManagment_AuthenticationSerivices.Controllers
             return Ok(new { message = "Login successful", user.UserID, user.UserName });
         }
 
-
-
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Users>>> GetAllUsers()
         {
-            var users = await _context.Users.ToListAsync();
-            return Ok(users);
+            try
+            {
+                throw new InvalidOperationException("Simulated exception to test Serilog logging.");
+                //List<Users> users = await _context.Users.ToListAsync(); // Fix for potential NullReferenceException
+                //return Ok(users);
+            }
+            catch (Exception ex)
+            {
+                var requestPath = HttpContext?.Request?.Path;
+                var methodName = nameof(GetAllUsers);
+
+                // 🔥 Full structured log for developer
+                _logger.LogError(
+                    "Exception in {Method} at {Path}. Message: {Message}. StackTrace: {StackTrace}",
+                    methodName,
+                    requestPath,
+                    ex.Message,
+                    ex.StackTrace);
+
+                // 🧼 Clean response to client
+                var errorResponse = new
+                {
+                    StatusCode = 500,
+                    Message = "Something went wrong. Please contact support."
+                };
+
+                var correlationId = HttpContext?.Items["CorrelationId"];
+                _logger.LogError(ex, "CorrelationId: {CorrelationId}, Exception: {Message}", correlationId, ex.Message);
+
+                return StatusCode(500, errorResponse);
+            }
         }
 
         [HttpGet("{id}")]
@@ -57,21 +87,17 @@ namespace ExpenceManagment_AuthenticationSerivices.Controllers
         [HttpPost]
         public async Task<ActionResult<Users>> CreateUser([FromBody] Users user)
         {
-
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            else
-            {
-                user.CreatedAt = DateTime.Now;
 
-                _context.Users.Add(user);
-                await _context.SaveChangesAsync();
+            user.CreatedAt = DateTime.Now;
 
-                return CreatedAtAction(nameof(GetUserById), new { id = user.UserID }, user);
-            }
-               
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetUserById), new { id = user.UserID }, user);
         }
 
         [HttpPut("{id}")]
@@ -83,15 +109,13 @@ namespace ExpenceManagment_AuthenticationSerivices.Controllers
                 return NotFound();
             }
 
-            // Update fields
             existingUser.UserName = updatedUser.UserName;
             existingUser.Email = updatedUser.Email;
             existingUser.PasswordHash = updatedUser.PasswordHash;
-            // We generally don't update CreatedAt during an update
 
             await _context.SaveChangesAsync();
 
-            return NoContent(); // 204 No Content
+            return NoContent();
         }
 
         [HttpDelete("{id}")]
@@ -106,9 +130,7 @@ namespace ExpenceManagment_AuthenticationSerivices.Controllers
             _context.Users.Remove(user);
             await _context.SaveChangesAsync();
 
-            return NoContent(); // 204 No Content
+            return NoContent();
         }
-
-
     }
 }
