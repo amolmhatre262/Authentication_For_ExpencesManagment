@@ -1,0 +1,138 @@
+2025-06-25 13:59:27.461 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-06-25 13:59:27.804 +05:30 [DBG] Hosting starting
+2025-06-25 13:59:28.224 +05:30 [DBG] Loaded hosting startup assembly ExpenceManagment_AuthenticationSerivices
+2025-06-25 13:59:28.227 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-06-25 13:59:28.227 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-06-25 13:59:28.228 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-06-25 13:59:28.435 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44327/swagger/index.html - null null
+2025-06-25 13:59:28.763 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-25 13:59:28.764 +05:30 [INF] Hosting environment: Development
+2025-06-25 13:59:28.764 +05:30 [INF] Content root path: D:\My Practice\Core_API_udemy_Qionnox\Expence_Managment_All_Services\ExpenceManagment_AuthenticationSerivices
+2025-06-25 13:59:28.764 +05:30 [DBG] Hosting started
+2025-06-25 13:59:28.794 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-06-25 13:59:28.820 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2025-06-25 13:59:28.821 +05:30 [DBG] Request did not match any endpoints
+2025-06-25 13:59:28.949 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2025-06-25 13:59:28.952 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-06-25 13:59:29.030 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2025-06-25 13:59:29.031 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2025-06-25 13:59:29.038 +05:30 [DBG] Connection ID "18158513702658113538" disconnecting.
+2025-06-25 13:59:29.047 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44327/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-25 13:59:29.051 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44327/_vs/browserLink - null null
+2025-06-25 13:59:29.046 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44327/swagger/index.html - 200 null text/html;charset=utf-8 641.6065ms
+2025-06-25 13:59:29.068 +05:30 [DBG] Connection ID "18158513702658113540" disconnecting.
+2025-06-25 13:59:29.072 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44327/_framework/aspnetcore-browser-refresh.js - 200 13816 application/javascript; charset=utf-8 10.8283ms
+2025-06-25 13:59:29.159 +05:30 [DBG] Connection ID "18158513698363146241" disconnecting.
+2025-06-25 13:59:29.168 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44327/_vs/browserLink - 200 null text/javascript; charset=UTF-8 117.4592ms
+2025-06-25 13:59:29.258 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44327/swagger/v1/swagger.json - null null
+2025-06-25 13:59:29.259 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2025-06-25 13:59:29.259 +05:30 [DBG] Request did not match any endpoints
+2025-06-25 13:59:29.300 +05:30 [DBG] Connection ID "18158513698363146243" disconnecting.
+2025-06-25 13:59:29.300 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44327/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 41.3493ms
+2025-06-25 13:59:38.816 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44327/api/Authenticate - null null
+2025-06-25 13:59:38.821 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Authenticate'
+2025-06-25 13:59:38.832 +05:30 [DBG] Endpoint 'ExpenceManagment_AuthenticationSerivices.Controllers.AuthenticateController.GetAllUsers (ExpenceManagment_AuthenticationSerivices)' with route pattern 'api/Authenticate' is valid for the request path '/api/Authenticate'
+2025-06-25 13:59:38.835 +05:30 [DBG] Request matched endpoint 'ExpenceManagment_AuthenticationSerivices.Controllers.AuthenticateController.GetAllUsers (ExpenceManagment_AuthenticationSerivices)'
+2025-06-25 13:59:38.839 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-25 13:59:38.848 +05:30 [INF] Executing endpoint 'ExpenceManagment_AuthenticationSerivices.Controllers.AuthenticateController.GetAllUsers (ExpenceManagment_AuthenticationSerivices)'
+2025-06-25 13:59:38.897 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "Authenticate"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ExpenceManagment_AuthenticationSerivices.Data.Models.Users]]] GetAllUsers() on controller ExpenceManagment_AuthenticationSerivices.Controllers.AuthenticateController (ExpenceManagment_AuthenticationSerivices).
+2025-06-25 13:59:38.901 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-25 13:59:38.901 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-25 13:59:38.902 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-25 13:59:38.902 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-25 13:59:38.903 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-25 13:59:38.906 +05:30 [DBG] Executing controller factory for controller ExpenceManagment_AuthenticationSerivices.Controllers.AuthenticateController (ExpenceManagment_AuthenticationSerivices)
+2025-06-25 13:59:39.208 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-06-25 13:59:39.232 +05:30 [DBG] Executed controller factory for controller ExpenceManagment_AuthenticationSerivices.Controllers.AuthenticateController (ExpenceManagment_AuthenticationSerivices)
+2025-06-25 13:59:39.336 +05:30 [INF] Executed action ExpenceManagment_AuthenticationSerivices.Controllers.AuthenticateController.GetAllUsers (ExpenceManagment_AuthenticationSerivices) in 430.023ms
+2025-06-25 13:59:39.338 +05:30 [INF] Executed endpoint 'ExpenceManagment_AuthenticationSerivices.Controllers.AuthenticateController.GetAllUsers (ExpenceManagment_AuthenticationSerivices)'
+2025-06-25 13:59:39.366 +05:30 [ERR] Unhandled exception occurred. Path: /api/Authenticate, TraceIdentifier: 4000000f-0001-f900-b63f-84710c7967bb
+System.InvalidOperationException: Simulated exception for testing middleware.
+   at ExpenceManagment_AuthenticationSerivices.Controllers.AuthenticateController.GetAllUsers() in D:\My Practice\Core_API_udemy_Qionnox\Expence_Managment_All_Services\ExpenceManagment_AuthenticationSerivices\Controllers\AuthenticateController.cs:line 40
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExpenceManagment_AuthenticationSerivices.Middlewares.ExceptionHandlingMiddleware.Invoke(HttpContext context) in D:\My Practice\Core_API_udemy_Qionnox\Expence_Managment_All_Services\ExpenceManagment_AuthenticationSerivices\Middlewares\ExceptionHandlingMiddleware.cs:line 23
+2025-06-25 13:59:39.454 +05:30 [DBG] Connection ID "17942340920544329742" disconnecting.
+2025-06-25 13:59:39.459 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44327/api/Authenticate - 500 null application/json 643.182ms
+2025-06-25 14:00:18.742 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-06-25 14:00:18.946 +05:30 [DBG] Hosting starting
+2025-06-25 14:00:19.534 +05:30 [DBG] Loaded hosting startup assembly ExpenceManagment_AuthenticationSerivices
+2025-06-25 14:00:19.536 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-06-25 14:00:19.536 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-06-25 14:00:19.536 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-06-25 14:00:19.706 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44327/swagger/index.html - null null
+2025-06-25 14:00:20.119 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-25 14:00:20.120 +05:30 [INF] Hosting environment: Development
+2025-06-25 14:00:20.121 +05:30 [INF] Content root path: D:\My Practice\Core_API_udemy_Qionnox\Expence_Managment_All_Services\ExpenceManagment_AuthenticationSerivices
+2025-06-25 14:00:20.121 +05:30 [DBG] Hosting started
+2025-06-25 14:00:20.123 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-06-25 14:00:20.165 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2025-06-25 14:00:20.166 +05:30 [DBG] Request did not match any endpoints
+2025-06-25 14:00:20.349 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2025-06-25 14:00:20.352 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-06-25 14:00:20.436 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2025-06-25 14:00:20.437 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2025-06-25 14:00:20.447 +05:30 [DBG] Connection ID "18158513702658113544" disconnecting.
+2025-06-25 14:00:20.467 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44327/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-25 14:00:20.468 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44327/_vs/browserLink - null null
+2025-06-25 14:00:20.470 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44327/swagger/index.html - 200 null text/html;charset=utf-8 775.5719ms
+2025-06-25 14:00:20.498 +05:30 [DBG] Connection ID "18374686506246733829" disconnecting.
+2025-06-25 14:00:20.498 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44327/_framework/aspnetcore-browser-refresh.js - 200 13816 application/javascript; charset=utf-8 14.2736ms
+2025-06-25 14:00:20.633 +05:30 [DBG] Connection ID "18302628912208805889" disconnecting.
+2025-06-25 14:00:20.634 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44327/_vs/browserLink - 200 null text/javascript; charset=UTF-8 166.5481ms
+2025-06-25 14:00:20.705 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44327/swagger/v1/swagger.json - null null
+2025-06-25 14:00:20.705 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2025-06-25 14:00:20.706 +05:30 [DBG] Request did not match any endpoints
+2025-06-25 14:00:20.725 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44327/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.5857ms
+2025-06-25 14:00:20.743 +05:30 [DBG] Connection ID "18374686497656799235" disconnecting.
+2025-06-25 14:00:27.522 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44327/api/Authenticate - null null
+2025-06-25 14:00:27.528 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Authenticate'
+2025-06-25 14:00:27.532 +05:30 [DBG] Endpoint 'ExpenceManagment_AuthenticationSerivices.Controllers.AuthenticateController.GetAllUsers (ExpenceManagment_AuthenticationSerivices)' with route pattern 'api/Authenticate' is valid for the request path '/api/Authenticate'
+2025-06-25 14:00:27.533 +05:30 [DBG] Request matched endpoint 'ExpenceManagment_AuthenticationSerivices.Controllers.AuthenticateController.GetAllUsers (ExpenceManagment_AuthenticationSerivices)'
+2025-06-25 14:00:27.540 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-06-25 14:00:27.542 +05:30 [INF] Executing endpoint 'ExpenceManagment_AuthenticationSerivices.Controllers.AuthenticateController.GetAllUsers (ExpenceManagment_AuthenticationSerivices)'
+2025-06-25 14:00:27.570 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "Authenticate"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ExpenceManagment_AuthenticationSerivices.Data.Models.Users]]] GetAllUsers() on controller ExpenceManagment_AuthenticationSerivices.Controllers.AuthenticateController (ExpenceManagment_AuthenticationSerivices).
+2025-06-25 14:00:27.574 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-06-25 14:00:27.574 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-06-25 14:00:27.575 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-06-25 14:00:27.575 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-06-25 14:00:27.575 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-06-25 14:00:27.577 +05:30 [DBG] Executing controller factory for controller ExpenceManagment_AuthenticationSerivices.Controllers.AuthenticateController (ExpenceManagment_AuthenticationSerivices)
+2025-06-25 14:00:27.825 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-06-25 14:00:27.865 +05:30 [DBG] Executed controller factory for controller ExpenceManagment_AuthenticationSerivices.Controllers.AuthenticateController (ExpenceManagment_AuthenticationSerivices)
+2025-06-25 14:00:27.981 +05:30 [INF] Executed action ExpenceManagment_AuthenticationSerivices.Controllers.AuthenticateController.GetAllUsers (ExpenceManagment_AuthenticationSerivices) in 399.1097ms
+2025-06-25 14:00:27.983 +05:30 [INF] Executed endpoint 'ExpenceManagment_AuthenticationSerivices.Controllers.AuthenticateController.GetAllUsers (ExpenceManagment_AuthenticationSerivices)'
+2025-06-25 14:00:28.024 +05:30 [ERR] Unhandled exception occurred. Path: /api/Authenticate, TraceIdentifier: 40000007-0000-fe00-b63f-84710c7967bb
+System.InvalidOperationException: Simulated exception for testing middleware.
+   at ExpenceManagment_AuthenticationSerivices.Controllers.AuthenticateController.GetAllUsers() in D:\My Practice\Core_API_udemy_Qionnox\Expence_Managment_All_Services\ExpenceManagment_AuthenticationSerivices\Controllers\AuthenticateController.cs:line 40
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExpenceManagment_AuthenticationSerivices.Middlewares.ExceptionHandlingMiddleware.Invoke(HttpContext context) in D:\My Practice\Core_API_udemy_Qionnox\Expence_Managment_All_Services\ExpenceManagment_AuthenticationSerivices\Middlewares\ExceptionHandlingMiddleware.cs:line 23
+2025-06-25 14:00:28.106 +05:30 [DBG] Connection ID "18302628886439002118" disconnecting.
+2025-06-25 14:00:28.110 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44327/api/Authenticate - 500 null application/json 588.2732ms
