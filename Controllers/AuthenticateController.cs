@@ -37,8 +37,10 @@ namespace ExpenceManagment_AuthenticationSerivices.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Users>>> GetAllUsers()
         {
-            var users = await _context.Users.ToListAsync();
-            return Ok(users);
+            throw new InvalidOperationException("Simulated exception for testing middleware.");
+
+            //var users = await _context.Users.ToListAsync();
+            //return Ok(users);
         }
 
         [HttpGet("{id}")]
