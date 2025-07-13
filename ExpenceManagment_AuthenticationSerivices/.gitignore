@@ -1,0 +1,7 @@
+﻿# Ignore build artifacts
+bin/
+obj/
+.vs/
+*.user
+*.suo
+TestResults/
