@@ -1,9 +1,87 @@
-using ExpenceManagment_AuthenticationSerivices.Data;
+﻿using ExpenceManagment_AuthenticationSerivices.Data;
+using ExpenceManagment_AuthenticationSerivices.Data.Models;
 using ExpenceManagment_AuthenticationSerivices.Middlewares;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using Serilog;
+using System.Text;
+
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Bind JWT settings
+var jwtSettings = builder.Configuration.GetSection("JwtSettings").Get<JwtSettings>();
+
+builder.Services.AddSingleton(jwtSettings);
+
+// Add authentication
+builder.Services.AddAuthentication("Bearer").AddJwtBearer("Bearer", options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = jwtSettings.Issuer,
+            ValidAudience = jwtSettings.Audience,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.SecretKey))
+        };
+        options.Events = new JwtBearerEvents
+        {
+            OnAuthenticationFailed = context =>
+            {
+                Console.WriteLine("Authentication Failed: " + context.Exception.Message);
+                return Task.CompletedTask;
+            },
+            OnTokenValidated = context =>
+            {
+                Console.WriteLine("Token Validated");
+                return Task.CompletedTask;
+            }
+        };
+    });
+
+
+
+builder.Services.AddAuthorization();
+
+
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API", Version = "v1" });
+
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description = "Bearer ThisIsASecretKeyForJwtDontShare",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer"
+    });
+
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+              Reference = new OpenApiReference
+              {
+                Type = ReferenceType.SecurityScheme,
+                Id = "Bearer"
+              },
+              Scheme = "oauth2",
+              Name = "Bearer",
+              In = ParameterLocation.Header,
+            },
+            new List<string>()
+        }
+    });
+});
+
 
 // Add services to the container.
 
@@ -37,6 +115,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
