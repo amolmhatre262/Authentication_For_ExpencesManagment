@@ -17,6 +17,7 @@ D:\My Practice\Core_API_udemy_Qionnox\Expence_Managment_All_Services\XUnit_Expen
 D:\My Practice\Core_API_udemy_Qionnox\Expence_Managment_All_Services\XUnit_Expencemanagment_Authentication.test\bin\Debug\net8.0\Azure.Core.dll
 D:\My Practice\Core_API_udemy_Qionnox\Expence_Managment_All_Services\XUnit_Expencemanagment_Authentication.test\bin\Debug\net8.0\Azure.Identity.dll
 D:\My Practice\Core_API_udemy_Qionnox\Expence_Managment_All_Services\XUnit_Expencemanagment_Authentication.test\bin\Debug\net8.0\Castle.Core.dll
+D:\My Practice\Core_API_udemy_Qionnox\Expence_Managment_All_Services\XUnit_Expencemanagment_Authentication.test\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\My Practice\Core_API_udemy_Qionnox\Expence_Managment_All_Services\XUnit_Expencemanagment_Authentication.test\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\My Practice\Core_API_udemy_Qionnox\Expence_Managment_All_Services\XUnit_Expencemanagment_Authentication.test\bin\Debug\net8.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 D:\My Practice\Core_API_udemy_Qionnox\Expence_Managment_All_Services\XUnit_Expencemanagment_Authentication.test\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
