@@ -1,6 +1,5 @@
 ﻿using ExpenceManagment_AuthenticationSerivices.Data.Models;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -23,9 +22,10 @@ namespace ExpenceManagment_AuthenticationSerivices.Controllers
         [HttpPost("login")]
         public IActionResult Login(LoginDto model)
         {
-           
-            if (model.UserName == "admin" && model.PasswordHash == "admin") 
+            if (model.UserName == "admin" && model.PasswordHash == "admin")
             {
+                Console.WriteLine("Generating token with SecretKey: " + _jwtSettings.SecretKey);
+
                 var claims = new[]
                 {
                     new Claim(ClaimTypes.Name, model.UserName)
@@ -38,7 +38,7 @@ namespace ExpenceManagment_AuthenticationSerivices.Controllers
                     issuer: _jwtSettings.Issuer,
                     audience: _jwtSettings.Audience,
                     claims: claims,
-                    expires: DateTime.Now.AddHours(1),
+                    expires: DateTime.UtcNow.AddMinutes(_jwtSettings.ExpiryMinutes),
                     signingCredentials: creds
                 );
 
