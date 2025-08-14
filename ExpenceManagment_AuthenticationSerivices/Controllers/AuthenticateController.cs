@@ -36,6 +36,7 @@ namespace ExpenceManagment_AuthenticationSerivices.Controllers
 
         //testing
 
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Users>>> GetAllUsers()
         {

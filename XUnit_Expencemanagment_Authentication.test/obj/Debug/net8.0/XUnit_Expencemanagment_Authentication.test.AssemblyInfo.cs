@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("XUnit_Expencemanagment_Authentication.test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25a1e322bacbdc9254a084e1d8d6c4e663c74758")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+501d06919cc42091242826ea18e857340b2729bb")]
 [assembly: System.Reflection.AssemblyProductAttribute("XUnit_Expencemanagment_Authentication.test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("XUnit_Expencemanagment_Authentication.test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
